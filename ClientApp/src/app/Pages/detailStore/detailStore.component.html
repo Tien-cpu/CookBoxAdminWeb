@@ -1,0 +1,23 @@
+<h1 id="tableLabel">Wellcome</h1>
+
+<p>This page will help you manage evevy store</p>
+
+<table class='table table-striped' aria-labelledby="tableLabel">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Address</th>
+      <th>ViewDetail</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let stor of listmenu">
+      <td>{{ stor.ID }}</td>
+      <td>{{ stor.Name }}</td>
+      <td>{{ stor.StoreID }}</td>
+      <td><a class="btn btn-outline-success" (click)="viewDetailStore(stor.StoreID)">View Detail</a></td>
+    </tr>
+  </tbody>
+</table>
